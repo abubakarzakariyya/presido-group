@@ -4,7 +4,7 @@ from .forms import ComplaintForm
 
 
 urlpatterns =[
-    path('home/', home, name= 'home'),
+    path('', home, name= 'home'),
     path('about-us/', about_us, name= 'about-us'),
     path('contact-us/', contact, name= 'contact-us'),
     path('allcars/', car_list, name='allcars'),
