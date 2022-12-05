@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-s0jcutq%6y(o^)11w$pn6v(6&ezg%i8foy=11b-)b4r@4spr6)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://web-production-c28d.up.railway.app']
+
+CSRF_TRUSTED_ORIGINS = ['https://web-production-c28d.up.railway.app']
 
 
 # Application definition
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
